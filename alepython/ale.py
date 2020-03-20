@@ -149,7 +149,7 @@ def _second_order_ale_quant(predictor, train_set, features, quantiles):
 	for i in range(1, len(quantiles[0])):
 		for j in range(1, len(quantiles[1])):
 			# Select subset of training data that falls within subset
-            subset = train_set[(quantiles[0,i-1] <= train_set[features[0]]) & (quantiles[0,i] > train_set[features[0]]) & (quantiles[1,j-1] <= train_set[features[1]]) & (quantiles[1,j] > train_set[features[1]])]
+			subset = train_set[(quantiles[0,i-1] <= train_set[features[0]]) & (quantiles[0,i] > train_set[features[0]]) & (quantiles[1,j-1] <= train_set[features[1]]) & (quantiles[1,j] > train_set[features[1]])]
 
 			# Without any observation, local effect on splitted area is null
 			if len(subset) != 0:
